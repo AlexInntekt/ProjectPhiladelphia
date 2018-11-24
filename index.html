@@ -1,11 +1,3 @@
-
-<?php
-
-session_start();
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +5,13 @@ session_start();
 
 
 
+
+
+
+
+
+
+      <meta name="Keywords" content="petshop online, petshop, animale, pisica, caine, pisici, caini"/>
 
 
 <!-- for cascade:-->
@@ -37,7 +36,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
-    <title>Material Design Bootstrap</title>
+    <title>Petshop animale pisica caine pisici caini </title>
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,13 +55,13 @@ session_start();
 
 body
 {
-	overflow-x:hidden;
-	max-width: 100%;
-}	
+  overflow-x:hidden;
+  max-width: 100%;
+} 
 html
 {
     overflow-x:hidden;
-	max-width: 100%;
+  max-width: 100%;
 }
 
 
@@ -113,14 +112,6 @@ html
 
 <body onload="load()">
 
-
-<?php
-
-  $_SESSION["index"] = 0
-
-?>
-
-
 <a href=”#” class=”back-to-top” style=”display: inline;”>
  
 <i class=”fa fa-arrow-circle-up”></i>
@@ -136,15 +127,48 @@ html
     <div class="centerContainer">
          
          
+<!-- Sidebar -->
+<div class="displaySwitcherOne w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
 
+<!-- Page Content -->
+<div class="w3-teal displaySwitcherOne">
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1>My Page</h1>
+  </div>
+</div>
+
+<img src="img_car.jpg" alt="Car" style="width:100%" class="displaySwitcherOne">
+
+<div class="w3-container displaySwitcherOne">
+<p>Magazin online petshop pentru animale</p>
+<p>Caini pisici</p>
+<p>Rozatoare insecte pesti</p>
+</div>
+
+<script>
+function w3_open() {
+    document.getElementById("mySidebar").style.width = "100%";
+    document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 
          
            <div class="topnav" id="myTopnav">
-              <a href="#home" class="active">Home</a>
-              <a href="news.html">News</a>
-               <a href="contact.html">Contact</a>
-               <a href="about.html">About</a>
-               <a href="sell.html">Sell</a>
+              <a href="index.html" >Petshop</a>
+              <a href="news.html">Pisici</a>
+               <a href="contact.html">Caini</a>
+               <a href="about.html"  class="active">Animale</a>
+               <a href="sell.html">Magazin</a>
+               <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
      </div>
      
@@ -162,15 +186,12 @@ html
              <div class="col-md-4" id="">
                  <img src="icon.png" style="width: 100px;" >                  
              </div>
-             
-              <div class="col-md-8" id="" style="text-align: left;">
-                 <p style="font: italic bold 12px/30px Georgia, serif; font-size: 200%; color: #DCDCC8"> Your drones community. Your playground. Our family.</p>                 
-             </div>
           
+            <div class="col-md-8" id="" style="text-align: left;">
+                 <p style="font: italic bold 12px/30px Georgia, serif; font-size: 200%;  color: #DCDCC8"> Our goal</p>                 
+             </div>
              
           </div>
-          
-          
      
   </div> 
   
@@ -196,39 +217,7 @@ html
 
 
 
-     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                     <div class="item active">
-                        <img src="cascadeImages/1.jpg" alt="image one" style="width:100%">
-                     </div>
-                     <div class="item">
-                        <img src="cascadeImages/2.jpg" alt="image two" style="width:100%;">
-                     </div>
-                     <div class="item">
-                        <img src="cascadeImages/3.jpg" alt="image three" style="width:100%;">
-                     </div>
-                  </div>
-                  <!-- Left and right controls -->
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                  <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                  </a>
-               </div>
-            </div>
-
-
-
+  
 
 
 
@@ -241,28 +230,56 @@ html
 
  
 
-    <div class="row" style="margin-top: 40px; padding: 0px;" id="products" >
+
     
-    
-        <div class="col-md-4" id="kerah">
-            <a href="product.html">  <img src="icon.png" alt="Image not available" style="width: 60%;">       
-                  <p style="color:#AB3100;font-size:130%; text-align: justify;"><br/>Drones products</p>
-                  <p> Default cell </p>
-              </a>     
-        </div>
         
+<div style="min-height: 600px; padding: 10px; background-color: #D6D6D6; border-radius: 15px;" >
+     <div class="flex-center flex-column" style="background-color: transparent;">
+        <br>
+                <h1> Petshop magazin online pisici pisica caini caini rozatoare animale </h1>
+            
+            <h3 class="animated fadeIn mb-4" >CONNECTING BUSINESSES WITH GREAT PRODUCTION</h3><br>
+               <p class="center" style=" font-family: Crimson; font-size: 140%;  width: 70%; "> &nbsp&nbsp&nbsp&nbspWith film and video content more popular than ever, we help connect businesses with the creative professionals needed to 
+make content to delight your target audiences. No matter what 
+goals you want to achieve, we'll help you find the qualified 
+professionals and resources you need to make your ideas 
+become a reality – anywhere around the world.</p>
+
+    <img src="aa1.png" style="width: 70%;"></img>
+
+                <p class="animated fadeIn text-muted">Eigendrones Team</p>
+                
+                <br><br><br>
+                
+   
+
+       
+                
+                
+            
+  
+  
+     </div>
+</div>
         
-   </div>
+                     
+            
 
 
 
-<br><br>
+
+ 
+ 
+
+
+
+   
 
 
     </div>
     <!-- container -->
 
-
+<br>
 
 
  <footer class="page-footer font-small  pt-4 mt-4" style="background-color: black;">
@@ -277,8 +294,8 @@ html
 
                 <!--First column-->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Eigendrones. Your drone place.</h6>
-                    <p>We are a network that provides access to one of the biggest drone markets in the world.</p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Petshop online</h6>
+                    <p>Magazin online petshop pentru animale</p>
                 </div>
                 <!--/.First column-->
 
@@ -286,11 +303,11 @@ html
 
                 <!--Second column-->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                    <p><a href="#!">MDBootstrap</a></p>
-                    <p><a href="#!">MDWordPress</a></p>
-                    <p><a href="#!">BrandFlow</a></p>
-                    <p><a href="#!">Bootstrap Angular</a></p>
+                     <h6 class="text-uppercase mb-4 font-weight-bold">Our shops</h6>
+                    <p><a href="#!">California</a></p>
+                    <p><a href="#!">Miami</a></p>
+                    <p><a href="#!">Magazin online animale</a></p>
+                    <p><a href="#!">Petshop online</a></p>
                 </div>
                 <!--/.Second column-->
 
@@ -298,11 +315,11 @@ html
 
                 <!--Third column-->
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                    <p><a href="#!">Your Account</a></p>
-                    <p><a href="#!">Become an Affiliate</a></p>
-                    <p><a href="#!">Shipping Rates</a></p>
-                    <p><a href="#!">Help</a></p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Caini</h6>
+                    <p><a href="#!">Pisici</a></p>
+                    <p><a href="#!">Magazin pentru animale</a></p>
+                    <p><a href="#!">Petshop online</a></p>
+                    <p><a href="#!">Petshop</a></p>
                 </div>
                 <!--/.Third column-->
 
@@ -310,10 +327,10 @@ html
 
                 <!--Fourth column-->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                    <p><i class="fa fa-home mr-3"></i> Bucharest, str Iuliu Maniu, Romania</p>
-                    <p><i class="fa fa-envelope mr-3"></i> alex.inntekt@gmail.com</p>
-                    <p><i class="fa fa-phone mr-3"></i> +40 773 995 330</p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Petshop</h6>
+                    <p><i class="fa fa-home mr-3"></i> Bucuresti</p>
+                    <p><i class="fa fa-envelope mr-3"></i> petshop!</p>
+                    <p><i class="fa fa-phone mr-3"></i> Animale</p>
                     
                 </div>
                 <!--/.Fourth column-->
@@ -329,7 +346,7 @@ html
                 <div class="col-md-8 col-lg-8">
 
                     <!--Copyright-->
-                    <p class="text-center text-md-left grey-text">© 2018 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"><strong> MDBootstrap.com</strong></a></p>
+                    <p class="text-center text-md-left grey-text"> Animale petshop pisici <a href="https://mdbootstrap.com/material-design-for-bootstrap/"><strong> Magazin pentru animale</strong></a></p>
                     <!--/.Copyright-->
 
                 </div>
